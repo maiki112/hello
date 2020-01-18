@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Neue Gruppe</title>
+    <!--Verbindung zu CSS Datei-->
+    <link rel="stylesheet" href="css/meineCSSDatei.css">
+    <!-- add icon link -->
+    <link rel="icon"
+        href="https://cdn0.iconfinder.com/data/icons/st-patrick-s-day-basic-lineal-color-1/512/13_Calendar-512.png"
+        type="image/x-icon">
+</head>
+
+<body>
+    <h2>Büro-Gruppe
+        <!-- Button für Logout Fenster -->
+        <div style="text-align: end;">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal"
+                data-target="#exampleModal">
+                angemeldet als test.user@gmail.com
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ausloggen</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div style="text-align: center;">
+                                <div style="font-size: smaller;">
+                                    Möchten Sie sich wirklich ausloggen?
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-dismiss="modal">Abbrechen</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Logout</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </h2>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Burger-Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <!-- Navbar links -->
+                <li class="nav-item">
+                    <a class="nav-link" href="Mainpage.html">Gruppenübersicht</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nachrichten</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Einstellungen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hilfe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Impressum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Datenschutz</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Code fürÜberschrift Gruppenmitglieder -->
+    <div style="font-size: 10%;">
+        <h4 style="color: black;">Gruppenmitglieder:</h4>
+    </div>
+
+    <!-- Code für Mitgliedertabelle und Chatbutton -->
+    <form class="form-inline">
+        <div class="form-group mb-2 mr-sm-5">
+            <input type="text" readonly class="form-control-plaintext" id="Name" value="Name:">
+        </div>
+        <div class="form-group mb-2 mr-sm-3">
+            <input type="text" readonly class="form-control-plaintext" id="Mail Adresse" value="Mail Adresse:">
+        </div>
+        <div>
+            <!-- Code für Chat Pop-ups -->
+            <form class="form-inline">
+                <div class="form-group mb+1">
+                    <label for="staticEmail2" class="sr-only">Name</label>
+                </div>
+                <!-- Button zum Chatten -->
+                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#staticBackdrop">
+                    Gruppenchat
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Nachricht an Gruppe senden</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Nachricht:</label>
+                                        <textarea class="form-control" id="message-text"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbrechen</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"> Senden</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </form>
+    <form class="form-inline">
+    </form>
+    <!-- Code für erste User Zeile -->
+    <form class="form-inline">
+        <div>
+            <fieldset disabled="disabled">
+                <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName4"
+                    placeholder="Herr Klein">
+                <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName5"
+                    placeholder="klein@gmx.de">
+            </fieldset>
+        </div>
+        <div>
+            <!-- Code für Chat Pop-ups -->
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="staticEmail2" class="sr-only">Name</label>
+                </div>
+                <!-- Button zum Chatten -->
+                <button type="button" class="btn btn-outline-primary mb-2" data-toggle="modal"
+                    data-target="#staticBackdrop">
+                    kontakieren
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop2" data-backdrop="static" tabindex="-1" role="dialog"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel2">Nachricht an User senden</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Nachricht:</label>
+                                        <textarea class="form-control" id="message-text2"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbrechen</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"> Senden</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </form>
+    <!-- Code für zweite User Zeile -->
+    <form class="form-inline">
+        <fieldset disabled="disabled">
+            <label class="sr-only" for="inlineForm">Name</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName6"
+                placeholder="Herr Müller">
+
+            <label class="sr-only" for="inlineFormInputName2">Name</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName7" placeholder="müller@gmx.de">
+        </fieldset>
+        <div>
+            <!-- Code für Chat Pop-ups -->
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="staticEmail2" class="sr-only">Name</label>
+                </div>
+                <!-- Button zum Chatten -->
+                <button type="button" class="btn btn-outline-primary mb-2" data-toggle="modal"
+                    data-target="#staticBackdrop">
+                    kontakieren
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop3" data-backdrop="static" tabindex="-1" role="dialog"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel3">Nachricht an User senden</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Nachricht:</label>
+                                        <textarea class="form-control" id="message-text3"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbrechen</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"> Senden</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </form>
+
+    <!-- Code für dritte User Zeile -->
+    <form class="form-inline">
+        <fieldset disabled="disabled">
+            <label class="sr-only" for="inlineForm">Name</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName8" placeholder="Herr Muster">
+
+            <label class="sr-only" for="inlineFormInputName2">Name</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName9" placeholder="muster@gmx.de">
+        </fieldset>
+        <div>
+            <!-- Code für Chat Pop-ups -->
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="staticEmail2" class="sr-only">Name</label>
+                </div>
+                <!-- Button zum Chatten -->
+                <button type="button" class="btn btn-outline-primary mb-2" data-toggle="modal"
+                    data-target="#staticBackdrop">
+                    kontakieren
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop4" data-backdrop="static" tabindex="-1" role="dialog"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel4">Nachricht an User senden</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Nachricht:</label>
+                                        <textarea class="form-control" id="message-text4"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbrechen</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"> Senden</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </form>
+
+    <!-- Code für Button zum Anlegen neuer User -->
+    <form class="form-inline">
+        <div class="form-group mb-2">
+            <label for="staticEmail2" class="sr-only">Name</label>
+            <input type="text" readonly class="form-control-plaintext" id="Neue User anlegen." value="  ">
+        </div>
+        <!-- Button für Hinzufügen von Usern -->
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#staticBackdrop">
+            Zusätzlichen User einladen
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdropp" data-backdrop="static" tabindex="-1" role="dialog"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabell">User einladen</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email Adresse</label>
+                                <input type="email" class="form-control " id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone
+                                    else.</small>
+                            </div>
+                            <div class="form-group">
+
+                                <label for="exampleInputname">Name</label>
+                                <input type="text" class="form-control " id="inputame">
+                            </div>
+                            <br>
+
+                            <button type="submit" class="btn btn-success btn-block">Senden und einladen</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a type="button" class="btn btn-warning btn-block" href="readygroup.html">Vorgang abbrechen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- Code für Überschrift Ressourcen -->
+    <div style="font-size: 10%;">
+        <h4 style="color: black;">Ressourcen:</h4>
+    </div>
+    <!-- Code für Unter Überschrift Ressourcen -->
+    <form class="form-inline">
+        <div class="form-group mb-2 mr-sm-5">
+            <input type="text" readonly class="form-control-plaintext" id="Name1" value="Ressourcen Name:">
+        </div>
+        <div class="form-group mb-2 mr-sm-3">
+            <input type="text" readonly class="form-control-plaintext" id="Mail Adresse1" value="Auslastung:">
+        </div>
+    </form>
+
+
+    <form class="form-inline">
+        <div>
+            <fieldset disabled="disabled">
+                <label class="sr-only" for="inlineForm">Name</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName81" placeholder="Konverenzraum 1">
+            </fieldset>
+        </div>
+        <meter value="10" min="0" max="100" high="90" low="10" optimum="60"></meter>
+
+    </form>
+    <form class="form-inline">
+        <div>
+            <fieldset disabled="disabled">
+                <label class="sr-only" for="inlineForm">Name</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName83" placeholder="Beamer">
+            </fieldset>
+        </div>
+        <meter value="50" min="0" max="100" high="90" low="10" optimum="60"></meter>
+    </form>
+    <form class="form-inline">
+        <div>
+            <fieldset disabled="disabled">
+                <label class="sr-only" for="inlineForm">Name</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName84"
+                    placeholder="Besprechungsraum 2">
+            </fieldset>
+        </div>
+        <meter value="70" min="0" max="100" high="90" low="10" optimum="60"></meter>
+    </form>
+
+    <!-- Code für Button zum Anlegen neuer Ressourcen -->
+    <form class="form-inline">
+        <div class="form-group mb-2">
+            <label for="staticEmail2" class="sr-only">Name</label>
+            <input type="text" readonly class="form-control-plaintext" id="neue Ressource" value="  ">
+        </div>
+        <div class="row">
+            <div class="col">
+                <div style="text-align: justify;">
+                    <a type="button" class="btn btn-success">
+                        Neue Ressource hinzufügen <span class="badge badge-light">+</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Code für Button zum Buchen von Ressourcen -->
+    <form class="form-inline">
+        <div class="form-group mb-2">
+            <input type="text" readonly class="form-control-plaintext" id="Ressource buchen" value="  ">
+        </div>
+        <div class="row">
+            <div class="col">
+                <div style="text-align: justify;">
+                    <a type="button" class="btn btn-outline-primary btn-lg mb-2 mr-sm-2">
+                        Ressource buchen <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Code für Button zum Gruppe wechseln und zurück zum Startbildschirm -->
+
+    <form class="form-inline">
+        <div class="container-fluid">
+            <a class="btn btn-primary btn-sm btn-block mb-2 mr-sm-2">Gruppe wechseln</a>
+        </div>
+
+        <div class="container-fluid">
+            <a class="btn btn-primary btn-sm btn-block" href="Mainpage.html">Startbildschirm</a>
+        </div>
+    </form>
+
+    <br>
+    <br>
+
+    <script src="js/meineJSDatei.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
